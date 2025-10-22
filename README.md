@@ -1,5 +1,4 @@
-# Outamation-Externship-Final
-
+# RAG-Pipeline-Externship
 ## Project Overview
 
 This repository contains the final project for the Outamation externship, featuring an AI-powered **RAG (Retrieval-Augmented Generation) Pipeline** nicknamed "Lucky". This project demonstrates expertise in building intelligent document question-answering systems using state-of-the-art AI technologies and vector databases.
@@ -40,8 +39,8 @@ The RAG pipeline processes PDF documents, creates searchable embeddings, and ena
 
 2. **Or Clone the repository** for local use:
    ```bash
-   git clone https://github.com/arthurvalenzuela/Outamation-Externship-Final.git
-   cd Outamation-Externship-Final
+   git clone https://github.com/arthurvalenzuela/RAG-Pipeline-Externship.git
+   cd RAG-Pipeline-Externship
    ```
 
 3. **Install required dependencies**:
@@ -69,7 +68,7 @@ The RAG pipeline processes PDF documents, creates searchable embeddings, and ena
 ## Project Structure
 
 ```
-Outamation-Externship-Final/
+RAG-Pipeline-Externship/
 │
 ├── RAG_Pipeline_"Lucky".ipynb    # Main Jupyter notebook with RAG implementation
 ├── README.md                      # Project documentation
