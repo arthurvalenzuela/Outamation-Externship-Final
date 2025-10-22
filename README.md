@@ -2,84 +2,90 @@
 
 ## Project Overview
 
-Outamation-Externship-Final is a comprehensive automation solution developed as part of an externship program. This project demonstrates proficiency in building scalable automation workflows, integrating various technologies, and implementing best practices for modern software development. The application streamlines repetitive tasks and showcases practical implementation of automation principles in real-world scenarios.
+This repository contains the final project for the Outamation externship, featuring an AI-powered **RAG (Retrieval-Augmented Generation) Pipeline** nicknamed "Lucky". This project demonstrates expertise in building intelligent document question-answering systems using state-of-the-art AI technologies and vector databases.
+
+The RAG pipeline processes PDF documents, creates searchable embeddings, and enables natural language question-answering by combining information retrieval with large language models.
 
 ## Features
 
-- **Automated Workflow Management**: Efficiently handles complex automation sequences with minimal manual intervention
-- **Modular Architecture**: Clean, maintainable codebase with separation of concerns
-- **Error Handling & Logging**: Robust error management with comprehensive logging capabilities
-- **Scalable Design**: Built to accommodate growing automation needs and requirements
-- **Configuration Management**: Flexible configuration options for different deployment environments
-- **Documentation**: Well-documented code and clear usage instructions
+- **PDF Document Processing**: Extracts and processes text from PDF files using PyMuPDF and Surya OCR
+- **Vector Store Integration**: Utilizes LlamaIndex with Qdrant for efficient document embeddings and retrieval
+- **AI-Powered Question Answering**: Leverages large language models for intelligent responses to user queries
+- **Embeddings Management**: Implements HuggingFace sentence transformers for semantic search capabilities
+- **Google Colab Ready**: Fully configured to run in Google Colab environment with all dependencies
 
 ## Technologies Used
 
-- **Programming Language**: Python 3.x
-- **Automation Framework**: Custom-built automation scripts
-- **Version Control**: Git & GitHub
-- **Development Tools**: VS Code, command-line utilities
-- **Additional Libraries**: (Specific dependencies listed in requirements.txt)
+- **Python 3.x**: Core programming language
+- **LlamaIndex**: Framework for building LLM applications with RAG capabilities
+- **Qdrant**: Vector database for storing and retrieving document embeddings
+- **PyMuPDF & Surya**: PDF processing and OCR libraries
+- **PyTorch**: Deep learning framework for AI models
+- **HuggingFace Transformers**: Pre-trained models for embeddings and NLP tasks
+- **Google Colab**: Development and execution environment
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.7 or higher installed on your system
-- Git for version control
-- Basic understanding of command-line operations
+- Google account for Colab access (recommended), or
+- Python 3.7 or higher installed locally
+- Basic understanding of AI/ML concepts and Jupyter notebooks
 
 ### Installation
 
-1. Clone the repository:
+1. **Open in Google Colab** (Recommended):
+   - Click on the notebook file `RAG_Pipeline_"Lucky".ipynb`
+   - Click "Open in Colab" button at the top
+
+2. **Or Clone the repository** for local use:
    ```bash
    git clone https://github.com/arthurvalenzuela/Outamation-Externship-Final.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
    cd Outamation-Externship-Final
    ```
 
-3. Install required dependencies:
+3. **Install required dependencies**:
+   - If using Colab, run Cell 1 in the notebook to install all dependencies
+   - If running locally, install packages manually:
    ```bash
-   pip install -r requirements.txt
+   pip install PyMuPDF surya-ocr torch
+   pip install llama-index llama-index-embeddings-huggingface
+   pip install llama-index-vector-stores-qdrant
    ```
 
-4. Configure environment variables (if applicable):
-   ```bash
-   cp .env.example .env
-   # Edit .env with your specific configuration
-   ```
+## Usage
 
-### Usage
+1. **Run the notebook cells in sequence**:
+   - Cell 1: Installs all required libraries
+   - Cell 2: Imports necessary modules and dependencies
+   - Subsequent cells: Follow the pipeline flow for document processing and Q&A
 
-1. Run the main automation script:
-   ```bash
-   python main.py
-   ```
+2. **Upload your PDF documents** when prompted
 
-2. Follow the on-screen prompts or refer to the documentation for specific commands
+3. **Ask questions** about your documents in natural language
 
-3. Check the logs directory for execution details and troubleshooting information
+4. **Receive AI-generated answers** based on document content
 
-## Example Output
-
-When executed successfully, the automation will:
+## Project Structure
 
 ```
-[INFO] Initializing automation workflow...
-[INFO] Loading configuration from config.yaml
-[INFO] Starting automation sequence
-[SUCCESS] Task 1 completed successfully
-[SUCCESS] Task 2 completed successfully
-[SUCCESS] All automation tasks completed
-[INFO] Execution time: 2.34 seconds
+Outamation-Externship-Final/
+│
+├── RAG_Pipeline_"Lucky".ipynb    # Main Jupyter notebook with RAG implementation
+├── README.md                      # Project documentation
+└── LICENSE                        # MIT License
 ```
+
+## Key Capabilities
+
+- **Semantic Search**: Find relevant information across documents using meaning, not just keywords
+- **Context-Aware Responses**: Generate answers that synthesize information from multiple sources
+- **Scalable Architecture**: Built to handle multiple documents and large datasets
+- **API Integration**: Uses Google Colab's secure userdata storage for API keys
 
 ## License
 
-This project is available for educational and portfolio purposes. Please refer to the LICENSE file for specific terms and conditions regarding use, modification, and distribution.
+This project is available for educational and portfolio purposes under the MIT License. Please refer to the LICENSE file for specific terms and conditions regarding use, modification, and distribution.
 
 ## Contact
 
